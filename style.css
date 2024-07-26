@@ -1,0 +1,560 @@
+body {
+    background-color: #122620;
+    font-family: Arial, sans-serif;
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+}
+/*Header*/
+header {
+    background-color: white;
+    color: #122620;
+    padding: 2vw 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo img {
+    max-width: 12vw;
+    min-width: 12vw;
+}
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav .menu ul {
+    list-style: none;
+    padding: 0;
+}
+header nav .menu ul li {
+    display: inline;
+    margin: 0 15px;
+    padding: 2.5vw 1vw;
+    height: 2vw;
+    border-radius: 1vw;
+}
+header nav .menu ul li.Commandez {
+    background-color: #F9C11C;
+}
+header nav .menu ul li a {
+    color: #122620;
+    text-decoration: none;
+}
+/* Styles pour le hamburger */
+.hamburger {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* Styles pour le menu overlay */
+.menu-overlay {
+    position: fixed;
+    margin-top: 50px;
+    margin-right: 10px;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    max-width: 200px;
+    height: 50vh;
+    background-color: #122620cd;
+    color: #FFF5E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    backdrop-filter: blur(8px); /* Applique un flou à l'arrière-plan */
+    border-radius: 25px;
+    box-shadow: 9px 2px rgba(0, 0, 0, 0.486) solid ;
+}
+.menu-overlay ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.menu-overlay li {
+    margin: 20px 0;
+}
+.menu-overlay a {
+    color: #FFF5E0;
+    text-decoration: none;
+    font-size: 2.2vh;
+}
+/*Accueil*/
+#accueil {
+    position: relative;
+    text-align: center;
+    padding: 0px 0;
+    background-color: white; /* Couleur de fond pour contraster avec la vidéo */
+}
+.video-container {
+    position: relative;
+    width: 60%; /* Ajuste cette valeur selon la taille souhaitée */
+   /* max-width: 800px;*/
+    margin: 0 auto; /* Centrer horizontalement */
+    overflow: hidden;
+}
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/*a-propos*/
+#a-propos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#a-propos .contenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+#a-propos .contenu p {
+    max-width: 50%;
+}
+#a-propos .contenu div{
+    width: 50%;
+    background-color: white;
+    padding: 1em;
+}
+#a-propos .contenu div img {
+    width: 100%;
+}
+#a-propos p {
+    text-align: center;
+    color: white;
+}
+#a-propos .titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F9C11C;
+}
+#a-propos .titre span {
+    flex: 1;
+    height: 0.5vw;
+    width: 3vw;
+    background-color: #F9C11C; /* Couleur des traits, ajuste selon tes besoins */
+    margin: 0 10px; /* Espace entre le trait et l'icône */
+}
+#a-propos .sites {
+    display: flex;
+    max-width: 90%;
+    overflow-x: auto; /* Permet le défilement horizontal */
+    padding: 1em;
+    gap: 1em;
+}
+#a-propos .sites ::-webkit-scrollbar {
+    width: 0;
+}
+#a-propos .sites .cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto; /* Assure que les éléments ne se réduisent pas */
+    width: 20%; /* Largeur des cartes */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    scroll-snap-align: start; /* Pour un alignement fluide des éléments */
+}
+#a-propos .sites .cart p {
+    text-align: center;
+    color: #122620;
+}
+#a-propos .sites a {
+    margin-top: 1vw;
+    padding: 1vw 1vw;
+    color: #F9C11C;
+    text-decoration: none;
+}
+#a-propos p a {
+    margin-top: 1vw;
+    padding: 1vw 1vw;
+    color: #F9C11C;
+    text-decoration: none;
+}
+#a-propos .sites .cart p a {
+    margin-top: 1vw;
+    padding: 1vw 1vw;
+    color: #122620;
+    text-decoration: none;
+    background-color: #F9C11C;
+    border-radius: 8px;
+}
+#a-propos .sites .cart .img {
+    width: 100%;
+    height: 30%; /* Hauteur de l'image */
+    background-color: #ccc; /* Placeholder pour l'image */
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+#a-propos .sites .cart img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/*menu*/
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menu .titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F9C11C;
+}
+#menu .titre span {
+    flex: 1;
+    height: 0.5vw;
+    width: 3vw;
+    background-color: #F9C11C; /* Couleur des traits, ajuste selon tes besoins */
+    margin: 0 10px; /* Espace entre le trait et l'icône */
+}
+#menu .contenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 90vw;
+}
+#menu .contenu div.plat{
+    max-width: 35%;
+    height: 35%;
+    background-color: #F9C11C;
+    padding: 0.5em;
+}
+#menu .contenu div.plat img {
+    width: 30vw;
+    height: 30vw;
+}
+#menu .contenu div.plat-nom {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menu .contenu div.plat-nom .name {
+    text-align: center;
+    color: white;
+}
+#menu .contenu div.plat-nom p.prix {
+    font-weight: bold;
+    padding: 1vw 3vw;
+    color: #122620;
+    background-color: #F9C11C;
+}
+ p {
+    text-align: center;
+    color: white;
+}
+p a {
+    margin-top: 1vw;
+    padding: 1vw 1vw;
+    color: #F9C11C;
+    text-decoration: none;
+}
+/*Alimentation*/
+#Alimentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Alimentation .contenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+#Alimentation .contenu p {
+    max-width: 50%;
+}
+#Alimentation .contenu div{
+    width: 50%;
+    background-color: white;
+    padding: 1em;
+}
+#Alimentation .contenu div img {
+    width: 100%;
+}
+#Alimentation p {
+    text-align: center;
+    color: white;
+}
+#Alimentation .titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F9C11C;
+}
+#Alimentation .titre span {
+    flex: 1;
+    height: 0.5vw;
+    width: 3vw;
+    background-color: #F9C11C; /* Couleur des traits, ajuste selon tes besoins */
+    margin: 0 10px; /* Espace entre le trait et l'icône */
+}
+#Alimentation .sites {
+    display: flex;
+    max-width: 90%;
+    overflow-x: auto; /* Permet le défilement horizontal */
+    padding: 1em;
+    gap: 1em;
+}
+#Alimentation .sites ::-webkit-scrollbar {
+    width: 0;
+}
+#Alimentation .sites .cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto; /* Assure que les éléments ne se réduisent pas */
+    width: 20%; /* Largeur des cartes */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    scroll-snap-align: start; /* Pour un alignement fluide des éléments */
+}
+#Alimentation .sites .cart p {
+    text-align: center;
+    color: #122620;
+}
+#Alimentation .sites a {
+    margin-top: 1vw;
+    padding: 1vw 1vw;
+    color: #F9C11C;
+    text-decoration: none;
+}
+#Alimentation p a {
+    margin-top: 1vw;
+    padding: 1vw 1vw;
+    color: #F9C11C;
+    text-decoration: none;
+}
+#Alimentation .sites .cart p a {
+    margin-top: 1vw;
+    padding: 1vw 1vw;
+    color: #122620;
+    text-decoration: none;
+    background-color: #F9C11C;
+    border-radius: 8px;
+}
+#Alimentation .sites .cart .img {
+    width: 100%;
+    height: 30%; /* Hauteur de l'image */
+    background-color: #ccc; /* Placeholder pour l'image */
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+#Alimentation .sites .cart img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/*Footer*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #122620;
+}
+footer .texte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 45vw;
+}
+footer .texte .tete h2{
+    font-size: 3.5vw;
+    color: #122620;
+    border-bottom: #F9C11C solid 0.5vw;
+}
+footer .social-icons img {
+    height: 5vw;
+    width: 5vw;
+}
+/* Styles for fixed buttons */
+.scroll-to-top, .scroll-to-bottom, .whatsapp-contact {
+    position: fixed;
+    z-index: 1000; /* Ensure the buttons are above other elements */
+}
+
+/* Scroll to Bottom Button */
+.scroll-to-bottom {
+    bottom: 9vw; /* Distance from the bottom */
+    left: 90%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    background-color: #f1c40f;
+    border: none;
+    color: #ffffff;
+    padding: 1vw 2vw;
+    font-size: 3vw;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Space between the buttons */
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    bottom: 2vw; /* Distance from the bottom */
+    left: 90%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    background-color: #f1c40f;
+    border: none;
+    color: #ffffff;
+    padding: 1vw 2vw;
+    font-size: 3vw;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: 10px; /* Space between the buttons */
+}
+
+/* WhatsApp Contact Button */
+.whatsapp-contact {
+    bottom: 20px; /* Distance from the bottom */
+    left: 20px; /* Distance from the left */
+}
+
+.whatsapp-contact img {
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Additional styles for hover effects */
+.scroll-to-top:hover, .scroll-to-bottom:hover {
+    background-color: #d4ac0d;
+}
+
+.whatsapp-contact img:hover {
+    opacity: 0.8;
+}
+@media (max-width: 836px) {
+    body {
+        font-size: 4vw;
+    }
+    /*Header*/
+    header .logo img {
+        max-width: 18vw;
+        min-width: 18vw;
+    }
+    header nav {
+        height: auto;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    header nav .menu {
+        display: none;
+    }
+
+    .menu-overlay.open {
+        right: 0;
+    }
+    /*Accueil*/
+    .video-container {
+        position: relative;
+        width: 90%; /* Ajuste cette valeur selon la taille souhaitée */
+       /* max-width: 800px;*/
+        margin: 0 auto; /* Centrer horizontalement */
+        overflow: hidden;
+    }
+    /*a-propos*/
+    #a-propos .contenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+    }
+    #a-propos .contenu p {
+        max-width: 100%;
+    }
+    #a-propos .contenu div{
+        width: 60%;
+        background-color: white;
+        padding: 1em;
+    }
+    #a-propos .sites .cart {
+        width: 40%; /* Largeur des cartes */
+    }
+    #a-propos .sites .cart .img {
+        width: 100%;
+        height: 150px; /* Hauteur de l'image */
+        background-color: #ccc; /* Placeholder pour l'image */
+        border-radius: 8px;
+        margin-bottom: 1em;
+    }
+        /*menu*/
+        /*Alimentation*/
+        #Alimentation .contenu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+        }
+        #Alimentation .contenu p {
+            max-width: 100%;
+        }
+        #Alimentation .contenu div{
+            width: 60%;
+            background-color: white;
+            padding: 1em;
+        }
+        #Alimentation .sites .cart {
+            width: 40%; /* Largeur des cartes */
+        }
+        #Alimentation .sites .cart .img {
+            width: 100%;
+            height: 150px; /* Hauteur de l'image */
+            background-color: #ccc; /* Placeholder pour l'image */
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+        /*footer*/
+        footer .social-icons img {
+            height: 7vw;
+            width: 7vw;
+        }
+        .whatsapp-contact img {
+            height: 8vw;
+            width: 8vw;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+}
